@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %} View {% endblock %}
+
+{% block body %}
+    {% set href = url('redirect_url', { id: entity.hash }) %}
+
+    <h3>Done!</h3>
+    <p>Here is your URL: <a href="{{ href }}">{{ href }}</a></p>
+    {% if entity.getExpiresAt() %}
+        <p>Expires at: {{ entity.getExpiresAt()|date }} UTC</p>
+    {% endif %}
+    <p>
+        <button class="btn btn-success btn-copy" id="copy-url" data-clipboard-text="{{ href }}">
+            Copy to clipboard
+        </button>
+    </p>
+{% endblock %}

@@ -1,0 +1,5 @@
+roukmoute_hashids:
+  salt:            "superSecretAdmitadSalt:)"
+  min_hash_length: 0
+  alphabet:        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+  passthrough:     false
