@@ -3,6 +3,7 @@
 To run service execute following command in terminal:
 
 ```bash
+mkdir docker/data/pgdata || true && \
 docker network create admitad-test || true && \
 docker-compose up -d && \
 docker-compose exec php composer install && \
